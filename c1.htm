@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-1</title>
+    <style>
+        .table-1{
+    background-color: aqua;
+    border: 1px solid;
+    width: 100%;
+    border-radius: 8px;
+}
+tr,th,td{
+    border: 1px solid black;
+    border-radius: 8px;
+}
+.a, .b, .c, .d, .e, .f, .g, .h, .i {
+            width: 100px;
+            height: 100px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+
+        .c {
+            border-radius: 20px;
+        }
+
+        .d {
+            border-radius: 10px;
+        }
+
+        .f {
+            border-radius: 20px;
+        }
+
+        .g {
+            border-radius: 50%;
+        }
+
+        .i {
+            border-radius: 0px 20px;
+        }
+        .table-2{
+            margin: auto;
+            border-collapse: separate;
+            border-spacing: 20px;
+        }
+        .table-2 td,.table-2 th{
+            border-color: #99CD29;
+            border-width: 3px;
+        }
+    </style>
+</head>
+<body>
+    <table class="table-1">
+        <tr>
+            <th>
+                Firstname
+            </th>
+            <th>
+                Lastname
+            </th>
+            <th>
+                Age
+            </th>
+        </tr>
+        <tr>
+            <td>Jill</td>
+            <td>Smith</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>Eve</td>
+            <td>Jackson</td>
+            <td>94</td>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>Doe</td>
+            <td>80</td>
+        </tr>
+    </table>
+    <br><br>
+    <table class="table-2">
+        <tr>
+            <th class="a"></th>
+            <th class="b"></th>
+            <th class="c"></th>
+        </tr>
+        <tr>
+            <td class="d"></td>
+            <td class="e"></td>
+            <td class="f"></td>
+        </tr>
+        <tr>
+            <td class="g"></td>
+            <td class="h"></td>
+            <td class="i"></td>
+        </tr>
+    </table>
+</body>
+</html>

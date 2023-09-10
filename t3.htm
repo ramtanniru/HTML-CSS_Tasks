@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-3</title>
+    <style>
+        div{
+            border: 1px solid;
+            display: inline-block;
+            width: 100%;
+            padding: 10px;
+            background-color: rgb(213, 213, 213);
+        }
+        ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            display: inline;   
+        }
+        li:not(:last-child)::after{
+            content: "|";
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>Click any of the following links</p>
+        <ul>
+            <li>
+                <a href="t1.htm" target="_blankt">Opens in New</a>
+            </li>
+            <li>
+                <a href="t1.htm" target="_self">Opens in Self</a>
+            </li>
+            <li>
+                <a href="t1.htm" target="_parent">Opens in Parent</a>
+            </li>
+            <li>
+                <a href="t1.htm" target="_top">Opens in Body</a>
+            </li>
+            <li>
+                <a href="mailto:ramtanniru2@gmail.com">Send Email</a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-2</title>
+    <style>
+        .ul1{
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .ul1 li{
+            background-color: aqua;
+            color: blue;
+            padding: 10px;
+        }
+        .ul1 li:hover{
+            background-color:rgb(255, 183, 3);
+            color: white;
+        }
+        .nav1{
+            border: 1px solid;
+            width:max-content;
+            padding: 10px;
+        }
+        .nav2{
+            border: 1px solid;
+            width: fit-content;
+            padding: 10px;
+            display: inline-block;
+        }
+        .ul2{
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .ul2 li{
+            float: left;
+            padding: 10px;
+            background-color: rgb(204, 204, 204);
+            color: blue;
+        }
+        .ul2 li:hover{
+            background-color: grey;
+            color: white;
+        }
+        div{
+            display: inline-block;
+        }
+        .ul2 li:not(
+            :last-child
+        ){
+            border-right: 1px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <h3>Vertical navigation bar</h3>
+    <nav class="nav1">
+        <ul class="ul1">
+            <li>
+                Home
+            </li>
+            <li>
+                Java
+            </li>
+            <li>
+                CSS
+            </li>
+            <li>
+                HTML
+            </li>
+            <li>Bootstrap</li>
+        </ul>
+    </nav>
+    </div>
+    <div>
+    <h3>Horizontal navigation bar</h3>
+    <nav class="nav2">
+        <ul class="ul2">
+            <li>Home</li>
+            <li>Java</li>
+            <li>HTML</li>
+            <li>CSS</li>
+        </ul>
+    </nav>
+    </div>
+</body>
+</html>
