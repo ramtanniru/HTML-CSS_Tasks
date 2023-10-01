@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BS-2</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+      .top_nav {
+        background-color: #fdbf33;
+      }
+      .sec_nav {
+        background-color: #030f27;
+      }
+      button {
+        border: 2px solid white;
+        background: transparent;
+        color: white;
+      }
+      .b {
+        background-image: url("images/task-2.jpg");
+        background-size: cover;
+        height: 70%;
+        transition: background-image 0.5s ease-in;
+      }
+      .movLeft:hover{
+        background-color: rgb(154, 153, 153);
+        border-radius: 10px;
+        filter:opacity(80%)
+      }
+      .movRight:hover{
+        background-color: rgb(154, 153, 153);
+        border-radius: 10px;
+        filter:opacity(80%)
+      }
+      html,
+      body {
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body class="d-flex flex-column">
+    <div class="top_nav d-flex flex-column">
+      <nav class="d-flex flex-row mx-5 pt-3 justify-content-between">
+        <h1 class="fw-bolder justify-content-start col-3">Builderz</h1>
+        <div class="d-flex flex-row justify-content-end col-9">
+          <div class="container-fluid d-flex gap-2 col-3">
+            <div class="align-self-center">
+              <img src="images/calendar.png" height="30px" />
+            </div>
+            <div class="d-flex flex-column align-items-start">
+              <h5>Opening hours</h5>
+              <p class="fw-light fs-6">Mon - Fri, 8:00 to 9:00</p>
+            </div>
+          </div>
+          <div class="container-fluid mx-2 d-flex gap-2 col-3">
+            <div class="align-self-center">
+              <img src="images/customer-care-1.png" height="30px" />
+            </div>
+            <div class="d-flex flex-column align-items-start">
+              <h6>Call us</h6>
+              <p class="fw-light fs-6">+9182688796</p>
+            </div>
+          </div>
+          <div class="container-fluid mx-2 d-flex gap-2 col-3">
+            <div class="align-self-center">
+              <img src="images/paper-plane.png" height="30px" />
+            </div>
+            <div class="d-flex flex-column align-items-start">
+              <h6>Email us</h6>
+              <p class="fw-light fs-6">info@example.com</p>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <nav
+        class="navbar navbar-expand-xxl d-flex justify-content-between sec_nav mx-5 p-3">
+        <ul
+          class="nav flex-md-row flex-column justify-content-start text-white">
+          <li class="nav-item mx-2">HOME</li>
+          <li class="nav-item mx-2">ABOUT</li>
+          <li class="nav-item mx-2">SERVICE</li>
+          <li class="nav-item mx-2">TEAM</li>
+          <li class="nav-item mx-2">PROJECT</li>
+          <li class="nav-item mx-2">
+            <div class="dropdown">
+              <button
+                class="dropdown-toggle btn text-white p-0 m-0"
+                type="button"
+                data-bs-toggle="dropdown">
+                PAGES<span class="caret text-white"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li class="dropdown-item"><a href="#">Page-1</a></li>
+                <li class="dropdown-item"><a href="#">Page-2</a></li>
+                <li class="dropdown-item"><a href="#">Page-3</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item mx-2">CONTENT</li>
+        </ul>
+        <button class="nav justify-content-end text-center p-2 px-3">
+          Get A Quote
+        </button>
+      </nav>
+    </div>
+    <div
+      class="container-fluid d-flex align-items-center b pt-5 pb-5 text-white">
+      <button class="btn text-white mx-3 movLeft text-center">
+        <i class="bi bi-chevron-left">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-chevron-left"
+            viewBox="0 0 16 16">
+            <path
+              fill-rule="evenodd"
+              d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+          </svg>
+        </i>
+      </button>
+      <div class="container text-center">
+        <h3>We Are Professional</h3>
+        <h1 class="fw-bolder">For your dream project</h1>
+        <button class="p-3 px-5 fw-bold">GET A QUOTE</button>
+      </div>
+      <button class="btn text-white mx-3 movRight text-center">
+        <i class="bi bi-chevron-right">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-chevron-right"
+            viewBox="0 0 16 16">
+            <path
+              fill-rule="evenodd"
+              d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+          </svg>
+        </i>
+      </button>
+    </div>
+    <div class="container-fluid d-flex c sec_nav">
+      <div class="col-4 text-white p-3 text-center">
+        <div class="d-flex flex-row col-12">
+          <div class="col-2 align-self-center">
+            <img src="images/worker.png" height="40px" />
+          </div>
+          <div
+            class="container-fluid d-flex flex-column align-items-start col-10">
+            <h3>Expert worker</h3>
+            <p class="text-start">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-4 p-3 text-center top_nav">
+        <div class="d-flex flex-row col-12">
+          <div class="col-2 align-self-center">
+            <img src="images/building.png" height="40px" />
+          </div>
+          <div
+            class="container-fluid d-flex flex-column align-items-start col-10">
+            <h3>Expert worker</h3>
+            <p class="text-start">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-4 text-white p-3 text-center sec_nav text-white">
+        <div class="d-flex flex-row col-12">
+          <div class="col-2 align-self-center">
+            <img src="images/customer-care.png" height="40px" />
+          </div>
+          <div
+            class="container-fluid d-flex flex-column align-items-start col-10">
+            <h3>Expert worker</h3>
+            <p class="text-start">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var images = [
+        "images/task-2.jpg",
+        "images/task-2.2.jpg",
+        "images/task-2.3.jpg",
+      ];
+      var index = 0;
+
+      function changeBGImage(index) {
+        document.querySelector(".b").style.backgroundImage =
+          "url(" + images[index] + ")";
+      }
+
+      document.querySelector(".movLeft").addEventListener("click", function () {
+        if (index > 0) {
+          index--;
+        }
+        changeBGImage(index);
+      });
+
+      document
+        .querySelector(".movRight")
+        .addEventListener("click", function () {
+          if (index < images.length - 1) {
+            index++;
+          }
+          changeBGImage(index);
+        });
+    </script>
+  </body>
+</html>

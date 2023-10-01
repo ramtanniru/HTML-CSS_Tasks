@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap 3 Contact form with Validation</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css">
+</head>
+<body>
+  <div class="container">
+    <form class="well form-horizontal" action="" method="post" id="contact_form">
+      <fieldset>
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="first_name">First Name</label>
+          <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+              <input id="first_name" name="first_name" placeholder="First Name" class="form-control" type="text">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="last_name">Last Name</label>
+          <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+              <input id="last_name" name="last_name" placeholder="Last Name" class="form-control" type="text">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="email">E-Mail</label>
+          <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+              <input id="email" name="email" placeholder="E-Mail Address" class="form-control" type="text">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="phone">Phone #</label>
+          <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+              <input id="phone" name="phone" placeholder="(845)555-1212" class="form-control" type="text">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="address">Address</label>
+          <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+              <input id="address" name="address" placeholder="Address" class="form-control" type="text">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="city">City</label>
+          <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+              <input id="city" name="city" placeholder="City" class="form-control" type="text">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="state">State</label>
+          <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+              <select id="state" name="state" class="form-control selectpicker">
+                <option value="">Please select your state</option>
+                <option>Alabama</option>
+                <option>Wyoming</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-4 control-label">Do you have hosting?</label>
+          <div class="col-md-4">
+            <div class="radio">
+              <label>
+                <input type="radio" name="hosting" value="yes" /> Yes
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="hosting" value="no" /> No
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="comment">Project Description</label>
+          <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+              <textarea id="comment" class="form-control" name="comment" placeholder="Project Description"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-4 control-label"></label>
+          <div class="col-md-4">
+            <button type="submit" class="btn btn-warning">Send <span class="glyphicon glyphicon-send"></span></button>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('#contact_form').bootstrapValidator({
+        feedbackIcons: {
+          valid: 'glyphicon glyphicon-ok',
+          invalid: 'glyphicon glyphicon-remove',
+          validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+          first_name: {
+            validators: {
+              notEmpty: {
+                message: 'Please supply your first name'
+              }
+            }
+          },
+          last_name: {
+            validators: {
+              notEmpty: {
+                message: 'Please supply your last name'
+              }
+            }
+          },
+          email: {
+            validators: {
+              notEmpty: {
+                message: 'Please supply your email address'
+              },
+              emailAddress: {
+                message: 'Please supply a valid email address'
+              }
+            }
+          },
+          phone: {
+            validators: {
+              notEmpty: {
+                message: 'Please supply your phone number'
+              },
+              phone: {
+                message: 'Please supply a valid phone number'
+              }
+            }
+          },
+          address: {
+            validators: {
+              notEmpty: {
+                message: 'Please supply your street address'
+              }
+            }
+          },
+          city: {
+            validators: {
+              notEmpty: {
+                message: 'Please supply your city'
+              }
+            }
+          },
+          state: {
+            validators: {
+              notEmpty: {
+                message: 'Please select your state'
+              }
+            }
+          },
+          comment: {
+            validators: {
+              notEmpty: {
+                message: 'The project description is required'
+              }
+            }
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>

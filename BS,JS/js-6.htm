@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS-6</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <div class="d-flex align-items-center flex-column gap-4 my-5 py-5">
+      <div class="w-25 bg-secondary-subtle mx-auto border-3 rounded-3 shadow">
+        <form class="w-75 d-flex flex-column gap-4 mx-auto py-4" novalidate>
+          <h2 class="text-center" style="font-family: cursive">Instagram</h2>
+
+          <div class="input-group">
+            <span class="input-group-text"
+              ><i class="bi bi-person-fill">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-person-fill"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+                </svg> </i
+            ></span>
+            <input
+              class="form-control"
+              aria-label="Username"
+              type="text"
+              placeholder="Username"
+              id="user"
+              required />
+            <div class="invalid-feedback alert-danger" id="user_feed">
+              Username is mandatory
+            </div>
+          </div>
+
+          <div class="input-group">
+            <span class="input-group-text"
+              ><i class="bi bi-lock-fill"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-lock-fill"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z" /></svg></i
+            ></span>
+            <input
+              class="form-control"
+              aria-label="Password"
+              type="password"
+              placeholder="Password"
+              id="pass"
+              required />
+            <div class="invalid-feedback alert-danger" id="pass_feed">
+              Password is mandatory
+            </div>
+          </div>
+
+          <div>
+            <button
+              class="btn btn-primary form-control"
+              onclick="login(event)"
+              type="button">
+              Log in
+            </button>
+          </div>
+
+          <div class="d-flex flex-row justify-content-between">
+            <span>
+              <input id="chk" class="form-check-input" type="checkbox" />
+              <label for="chk" class="form-text">Remember me</label>
+            </span>
+            <span><p class="text-primary">Forgot Password?</p></span>
+          </div>
+        </form>
+      </div>
+
+      <div class="row w-25 mx-auto d-flex flex-row text-center">
+        <p class="col">Don't have an account!</p>
+        <p class="col text-primary">Sign up here</p>
+      </div>
+    </div>
+    <script>
+      function login(event) {
+        "use strict";
+        event.preventDefault();
+        const u_name = document.getElementById("user");
+        const pass = document.getElementById("pass");
+        const cred = [u_name, pass];
+        cred.forEach((x) => {
+          if (!x.checkValidity()) {
+            x.classList.add("is-invalid");
+          } else {
+            x.classList.remove("is-invalid");
+          }
+        });
+        var f_name = document.getElementById("user_feed");
+        var f_pass = document.getElementById("pass_feed");
+        const validate = (pass) => {
+          const regex =
+            /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+          return regex.test(pass);
+        };
+        if (!validate(pass.value)) {
+          f_pass.classList.add("is-invalid");
+          f_pass.textContent = "Enter a valid password";
+        } else {
+          f_pass.classList.remove("is-invalid");
+        }
+      }
+    </script>
+  </body>
+</html>

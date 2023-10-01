@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS-8</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <div
+      class="col-8 mx-auto container text-center py-5"
+      style="background: linear-gradient(to bottom, #faf8cf, #d385b5)">
+      <form class="d-flex flex-column gap-2 validate" novalidate>
+        <h1
+          class="text-center fw-bold"
+          style="font-family: 'Times New Roman', Times, serif; color: blue">
+          Registration form
+        </h1>
+
+        <!-- First Name -->
+
+        <div class="d-flex flex-row col-8 gap-3">
+          <label for="fname" class="form-label col-4 text-end">Full Name</label>
+          <input class="form-control col-3" id="fname" type="text" required />
+          <div class="invalid-feedback alert-danger col">POOR</div>
+        </div>
+
+        <!-- Last Name -->
+
+        <div class="d-flex flex-row col-8 gap-3">
+          <label for="lname" class="form-label col-4 text-end">Last Name</label>
+          <input class="form-control col-3" id="lname" type="text" required />
+          <div class="invalid-feedback alert-danger col">POOR</div>
+        </div>
+
+        <!-- Email -->
+
+        <div class="d-flex flex-row col-8 gap-3">
+          <label for="email" class="form-label col-4 text-end">Email</label>
+          <input class="form-control col-3" id="email" type="email" required />
+          <div class="invalid-feedback alert-danger col">POOR</div>
+        </div>
+
+        <!-- Password -->
+
+        <div class="d-flex flex-row col-8 gap-3">
+          <label for="pwd" class="form-label col-4 text-end">Password</label>
+          <input class="form-control col-3" id="pwd" type="password" required />
+          <div class="invalid-feedback alert-danger col">POOR</div>
+        </div>
+
+        <!-- Re-enterPassword -->
+
+        <div class="d-flex flex-row col-8 gap-3">
+          <label for="repwd" class="form-label col-4 text-end">Re-enter Password</label>
+          <input
+            class="form-control col-3"
+            id="repwd"
+            type="password"
+            required />
+          <div class="invalid-feedback alert-danger col">POOR OR MISMATCH</div>
+        </div>
+
+        <!-- Gender -->
+
+        <div class="d-flex flex-row col-8 gap-3">
+          <label for="gender" class="form-label col-4 text-end">Gender</label>
+          <div id="gender row col-3">
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="gender"
+                id="male" />
+              <label class="form-check-label" for="male"> Male </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="gender"
+                id="female"
+                checked />
+              <label class="form-check-label" for="female"> Female </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Age -->
+
+        <div class="d-flex flex-row col-8 gap-3">
+          <label for="age" class="form-label col-4 text-end">Age</label>
+          <input class="form-control col-3" id="age" type="number" required />
+          <div class="invalid-feedback alert-danger col">POOR</div>
+        </div>
+
+        <!-- Phone Number -->
+
+        <div class="d-flex flex-row col-8 gap-3">
+          <label for="phn" class="form-label col-4 text-end">Phone Number</label>
+          <input class="form-control col-3" id="phn" type="number" required />
+          <div class="invalid-feedback alert-danger col">POOR</div>
+        </div>
+
+        <!-- Address -->
+
+        <div class="d-flex flex-row col-8 gap-3">
+          <label for="add" class="form-label col-4 text-end">Address</label>
+          <textarea class="form-control col-3" id="add" required></textarea>
+          <div class="invalid-feedback alert-danger col">POOR</div>
+        </div>
+
+        <!-- State -->
+
+        <div class="d-flex flex-row col-8 gap-3">
+          <label for="state" class="form-label col-4 text-end">State</label>
+          <input class="form-control col-3" id="state" type="text" required />
+          <div class="invalid-feedback alert-danger col">POOR</div>
+        </div>
+
+        <!-- Country -->
+
+        <div class="d-flex flex-row col-8 gap-3">
+          <label for="country" class="form-label col-4 text-end">Country</label>
+          <select class="form-select form-control col-2" id="country">
+            <option selected disabled hidden>Choose your country</option>
+            <option>India</option>
+            <option>Pakistan</option>
+            <option>Bangladesh</option>
+          </select>
+        </div>
+
+        <!-- Languages known -->
+
+        <div class="d-flex flex-row col-8 gap-3">
+          <label for="lang" class="form-label col-4 text-end">Languages known</label>
+          <div class="col-12 text-start">
+            <span class="form-check-inline">
+              <input class="form-check-input" type="checkbox" id="eng" />
+              <label class="form-check-label" for="eng">English</label>
+            </span>
+            <span class="form-check-inline">
+              <input class="form-check-input" type="checkbox" id="kan" />
+              <label class="form-check-label" for="kan">Kannada</label>
+            </span>
+            <span class="form-check-inline">
+              <input class="form-check-input" type="checkbox" id="hin" />
+              <label class="form-check-label" for="hin">Hindi</label>
+            </span>
+            <span class="form-check-inline">
+              <input class="form-check-input" type="checkbox" id="tel" />
+              <label class="form-check-label" for="tel">Telugu</label>
+            </span>
+          </div>
+        </div>
+
+        <!-- Declaration checkbox -->
+
+        <div class="d-flex flex-row col-8 gap-3 justify-content-center">
+          <input class="form-check-input col-4" type="checkbox" id="dec" />
+          <label for="dec" class="form-check-label">
+            Hereby I declare all the given details are true</label
+          >
+        </div>
+
+        <!-- Login to ethnus -->
+
+        <div class="col-10 text-end">
+          <span
+            >Log in to <a href="https://ethnus.com/">Ethnus</a> website</span
+          >
+        </div>
+
+        <!-- Register -->
+
+        <div class="col-12">
+          <button
+            class="btn btn-danger rounded-3"
+            onclick="reg(event)"
+            type="submit">
+            Register
+          </button>
+        </div>
+      </form>
+    </div>
+    <script>
+      function reg(event) {
+        "use strict";
+        event.preventDefault();
+        const ids = [
+          "fname",
+          "lname",
+          "email",
+          "pwd",
+          "repwd",
+          "age",
+          "phn",
+          "add",
+          "state",
+        ];
+        const input = [];
+        ids.forEach((element) => {
+          var a = document.getElementById(String(element));
+          input.push(a);
+        });
+        input.forEach((element) => {
+          if (!element.checkValidity()) {
+            element.classList.add("is-invalid");
+          } else {
+            element.classList.remove("is-invalid");
+          }
+        });
+        if (input[3].value != input[4].value) {
+          input[4].classList.add("is-invalid");
+        }
+      }
+    </script>
+  </body>
+</html>
