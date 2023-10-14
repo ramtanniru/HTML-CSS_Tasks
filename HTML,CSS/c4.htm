@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-4</title>
+    <style>
+        nav div:hover{
+            width: 55px;
+            height: 55px;
+        }
+        nav div{
+            margin-bottom: 10px;
+            margin-left: 0;
+            width: 50px;
+            height: 50px;   
+            border-radius: 0 6px 6px 0;
+        }
+        .main{
+            display: inline-block;
+            border: 1px solid;
+            padding: 10px;
+            padding-left: 0;
+            width: 100%;
+        }
+        .side{
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 10px;
+        }
+        nav{
+            display: inline-block;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class ="main">
+    <nav>
+        <div style="background-color: green;"></div>
+        <div style="background-color: blue;"></div>
+        <div style="background-color: red;"></div>
+        <div style="background-color: grey;"></div>
+    </nav>
+    <div class="side">
+    <h3>Hoverable Sidenav Buttons</h3>
+    <p>Hover over the buttons in the left side navigation to open them</p>
+    </div>
+    </div>
+</body>
+</html>
